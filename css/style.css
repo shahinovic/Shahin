@@ -170,6 +170,10 @@ header .container > .logo {
     z-index: 1;
     transition: color var(--main-transition) 0.4s linear;
 }
+
+.logo.fade {
+    animation: fade 1s linear  infinite alternate;
+}
 header .container > .logo::before {
     content: '';
     position: absolute;
@@ -193,7 +197,7 @@ header .container > .logo::after {
     
 }
 header .container > .logo:hover {
-    color: #fff;
+    color: #fff !important;
 }
 header .container > .logo:hover::after, 
 header .container > .logo:hover::before {
@@ -1710,6 +1714,15 @@ footer .container .footer-gallery img {
     100% {
         width: 200%;
         height: 200%;
+    }
+}
+
+@keyframes fade {
+    0% {
+        color: #2196f3;
+    }
+    100% {
+        color: #2195f355;
     }
 }
 /* end animation */
